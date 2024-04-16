@@ -4,24 +4,6 @@ with source as (
 
 ),
 
-row_numbering as (
-
-    select
-        *,
-        row_number() over (partition by id order by received_at asc) as row_num
-    from source
-
-),
-
-deduped as (
-
-    select
-        *
-    from row_numbering
-    where row_num = 1
-
-),
-
 renamed as (
 
     select
@@ -68,7 +50,7 @@ renamed as (
 
         {% endif %}
 
-    from deduped
+    from source
 
 ),
 
