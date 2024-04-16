@@ -15,6 +15,7 @@ renamed as (
         received_at as received_at_tstamp,
         sent_at as sent_at_tstamp,
         timestamp as tstamp,
+        event_date,
 
         url as page_url,
         {{ dbt_utils.get_url_host('url') }} as page_url_host,
