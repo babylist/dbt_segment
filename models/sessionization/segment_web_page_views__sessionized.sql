@@ -147,7 +147,7 @@ session_ids as (
 
         {{dbt_utils.star(ref('segment_web_page_views'))}},
         page_view_number,
-        {{dbt_utils.surrogate_key(['anonymous_id', 'session_start_testamp', 'session_number'])}} as session_id
+        {{dbt_utils.surrogate_key(['anonymous_id', 'session_start_tstamp', 'session_number'])}} as session_id
 
     from session_starts
 
