@@ -136,7 +136,7 @@ session_starts as (
 
     from session_numbers
 
-)
+),
 
 session_ids as (
 
