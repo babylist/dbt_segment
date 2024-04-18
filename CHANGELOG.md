@@ -1,3 +1,7 @@
+# babylist/dbt_segment v0.1.0
+
+This release restarts versioning at v0.8.1 of the upstream repo, which is what we're using as of April 2024.
+
 # segment v0.8.1
 ## Fixes
 - Fix duplication of sources in incremental materializations ([#80](https://github.com/dbt-labs/segment/issues/80), [#81](https://github.com/dbt-labs/segment/pull/81))
