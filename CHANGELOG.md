@@ -1,3 +1,11 @@
+# babylist/dbt_segment v0.2.0
+
+## Improvements
+
+- Remove expensive deduplication of source page views, which is already handled upstream in our dbt models
+- Add uniquifying element to page view sessionization to account for subsetting of source page view model
+
+
 # babylist/dbt_segment v0.1.0
 
 This release restarts versioning at v0.8.1 of the upstream repo, which is what we're using as of April 2024.
