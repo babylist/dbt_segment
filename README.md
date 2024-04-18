@@ -51,8 +51,7 @@ for more details:
 
     ```
 
-5. Execute `dbt seed` -- this project includes a CSV that must be seeded for it
-the package to run successfully.
+5. Execute `dbt seed` -- this project includes a CSV that must be seeded for the package to run successfully.
 6. Execute `dbt run` – the Segment models will get built as part of your run!
 
 ## Database support
