@@ -1,9 +1,11 @@
-# dbt-segment
+# dbt_segment
 
 This [dbt package](https://docs.getdbt.com/docs/package-management):
 
 * Performs "user stitching" to tie all events associated with a cookie to the same user_id
 * Transforms pageviews into sessions ("sessionization")
+
+This has been forked from the original upstream repo by dbt Labs in order to apply optimizations for Babylist's dbt project.
 
 ## Installation instructions
 
