@@ -145,7 +145,7 @@ session_ids as (
 
     select
 
-        {{dbt_utils.star(ref('segment_web_page_views'), relation_alias='session_starts')}},
+        {{dbt_utils.star(from=ref('segment_web_page_views'), relation_alias='session_starts')}},
         session_starts.page_view_number,
         {% if is_incremental() %}sessionized.session_id{% else %}null::string{% endif %} as existing_session_id,
         {{dbt_utils.surrogate_key(['session_starts.anonymous_id', 'session_starts.session_start_tstamp', 'session_starts.session_number'])}} as session_id
