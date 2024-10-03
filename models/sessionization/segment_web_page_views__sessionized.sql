@@ -77,7 +77,7 @@ diffed as (
 
     select
         *,
-        {{ dbt_utils.datediff('previous_tstamp', 'tstamp', 'second') }} as period_of_inactivity
+        {{ dbt.datediff('previous_tstamp', 'tstamp', 'second') }} as period_of_inactivity
     from lagged
 
 ),
@@ -152,7 +152,7 @@ session_ids as (
         session_starts.session_start_tstamp,
         --if an event has previously been sessionized, keep the existing session ID
         {% if is_incremental() %}sessionized.session_id{% else %}null::string{% endif %} as existing_session_id,
-        {{dbt_utils.surrogate_key(['session_starts.anonymous_id', 'session_starts.session_start_tstamp', 'session_starts.session_number'])}} as session_id
+        {{dbt_utils.generate_surrogate_key(['session_starts.anonymous_id', 'session_starts.session_start_tstamp', 'session_starts.session_number'])}} as session_id
 
     from session_starts
     {% if is_incremental() %}

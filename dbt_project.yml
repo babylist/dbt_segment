@@ -8,6 +8,7 @@ analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
+profile: babylist_analytics_snowflake
 
 target-path: "target"
 clean-targets:
@@ -22,6 +23,7 @@ vars:
   # events can come in late and we want to still be able to incorporate
   # them into the definition of a session without needing a full refresh.
   segment_sessionization_trailing_window: 3
+  surrogate_key_treat_nulls_as_empty_strings: true
 
   # sessionization inactivity cutoff: of there is a gap in page view times
   # that exceeds this number of seconds, the subsequent page view will
