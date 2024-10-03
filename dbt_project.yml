@@ -2,6 +2,7 @@ name: 'segment'
 version: '0.7.0'
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 config-version: 2
+profile: babylist_analytics_snowflake
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -38,3 +39,5 @@ vars:
   # BigQuery only: partition granularity for partition_by clause
   # options can be found here: https://docs.getdbt.com/reference/resource-configs/bigquery-configs#partition-clause
   segment_bigquery_partition_granularity: "day"
+  surrogate_key_treat_nulls_as_empty_strings: true
+  
