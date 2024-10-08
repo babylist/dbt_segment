@@ -1,4 +1,5 @@
-
-target/
-dbt_modules/
-logs/
+target/*
+dbt_modules/*
+logs/*
+dbt_packages/*
+.vscode/*
