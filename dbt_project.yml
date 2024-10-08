@@ -40,4 +40,3 @@ vars:
   # options can be found here: https://docs.getdbt.com/reference/resource-configs/bigquery-configs#partition-clause
   segment_bigquery_partition_granularity: "day"
   surrogate_key_treat_nulls_as_empty_strings: true
-  
