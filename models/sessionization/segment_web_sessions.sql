@@ -4,7 +4,8 @@
     sort = 'session_start_tstamp',
     partition_by = {'field': 'session_start_tstamp', 'data_type': 'timestamp', 'granularity': var('segment_bigquery_partition_granularity')},
     dist = 'session_id',
-    cluster_by = 'session_id'
+    cluster_by = 'session_id',
+    full_refresh = false
     )}}
 
 {#
